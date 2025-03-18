@@ -3,7 +3,7 @@ package searching;
 public class CellingOfArray {
     public static void main (String[] args){
         int [] arr = {2, 4, 5, 6, 9, 12, 14, 16, 18};
-        int target = 15;
+        int target = 11;
         System.out.println (answer(arr,target));
     }
     static int answer (int[] arr, int target){
@@ -15,7 +15,7 @@ public class CellingOfArray {
         while (end >= start){
             int mid = start + (end - start) / 2;
 
-            if (arr[mid] == target){
+            if (target == arr[mid]){
                 return mid;
             }
             if (isAsc){
@@ -33,6 +33,6 @@ public class CellingOfArray {
                 }
             }
         }
+        return start;
     }
-    return start;
 }
